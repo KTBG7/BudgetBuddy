@@ -1,12 +1,22 @@
 import React from "react";
 import { GoogleLogin } from "react-google-login";
+import { useNavigate} from "react-router-dom";
 
 const SignUpPage: React.FC = () => {
-  const handleSignUp = () => {};
+  const navigate = useNavigate();
 
-  const handleGoogleSignUpSuccess = () => {};
+  const handleSignUp = () => {
+    // Directly navigate to the dashboard
+    navigate('/dashboard');
+  };
 
-  const handleGoogleSignUpFailure = () => {};
+  const handleGoogleSignUpSuccess = () => {
+    navigate('/dashboard');
+  };
+
+  const handleGoogleSignUpFailure = () => {
+  };
+
 
   return (
     <div className="container mx-auto mt-8">
