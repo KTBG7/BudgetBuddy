@@ -1,5 +1,5 @@
 import React from 'react';
-import MortgageLoan from '../assets/MortgageLoan.png.webp'
+import loans from '../assets/loans.png';
 import investment from '../assets/investment.png'
 import CreditCardPic from '../assets/CreditCardPic.png'
 import trackexpenses from '../assets/trackexpenses.png.webp'
@@ -47,7 +47,7 @@ const HomePage: React.FC = () => {
                     <div className="w-full sm:w-1/2 lg:w-1/3 px-1 mb-4 border-black rounded-lg">
                         <h3 className="text-xl font-bold mb-3">Loans and Mortgages</h3>
                         <div className="bg-white-200 py-6 px-6 rounded-lg aspect-w-[16] aspect-h-[9] border border-gray-400">
-                            <img src={MortgageLoan} alt="Loans" className="w-full h-full object-cover" />
+                            <img src={loans} alt="Loans" className="w-full h-full object-cover" />
                         </div>
                         <p className='text-center mt-4 text-gray-500'>Loans and mortgages are confusing, but they <br />dont need to be. Get started and learn more.</p>
                         <div className="mt-3 flex justify-center space-x-4">
