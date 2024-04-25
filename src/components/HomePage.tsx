@@ -2,8 +2,9 @@ import React from 'react';
 import loans from '../assets/loans.png';
 import investment from '../assets/investment.png'
 import CreditCardPic from '../assets/CreditCardPic.png'
-import trackexpenses from '../assets/trackexpenses.png.webp'
 import buildCredit from "../assets/buildCredit.png.jpeg"
+import RecentTransactions from '../assets/RecentTransactions.png'
+import { Link } from 'react-router-dom';
 
 
 
@@ -18,7 +19,9 @@ const HomePage: React.FC = () => {
                     <br></br>
                     <p>BudgetBuddy enables you to learn about finances while helping you budget your expenses easily and securely.</p>
                     <div className="flex mt-4">
-                        <button className="bg-blue-500 text-white py-2 px-4 rounded-full mr-4">Get Started</button>
+                        <Link to='/signup'>
+                            <button className="bg-blue-500 text-white py-2 px-4 rounded-full mr-4">Get Started</button>
+                        </Link>
                     </div>
                 </div>
                 {/* Credit Card Image*/}
@@ -37,7 +40,7 @@ const HomePage: React.FC = () => {
                         <div className="bg-white-200 py-6 px-6 rounded-lg aspect-w-[16] aspect-h-[9] border border-gray-400">
                             <img src={investment} alt="Investment" className="w-full h-full object-cover" />
                         </div>
-                        <p className='text-center mt-4 text-gray-500'>Investing 101. Learn about common terms used, <br />investinggot retirement, and how to get started.</p>
+                        <p className='text-center mt-4 text-gray-500'>Investing 101. Learn about common terms used, <br />investing retirement, and how to get started.</p>
                         <div className="mt-3 flex justify-center space-x-4">
                             <a href="#" className="text-black py-2 spacce-x-4">Quiz Me</a>
                             <a href="#" className="underline text-black py-2 px-4">Learn More</a>
@@ -76,12 +79,14 @@ const HomePage: React.FC = () => {
                 <h2 className="text-3xl font-bold mb-4">Track Your Expenses</h2>
                 <div className="flex items-center justify-center flex-col md:flex-row">
                     <div className="md:w-1/2 md:pr-3">
-                        <img src={trackexpenses} alt="Tracking" className="w-full h-auto border border-gray-500 rounded-lg" style={{ maxWidth: '100%' }} />
+                        <img src={RecentTransactions} alt="Tracking" className="w-full h-auto border border-gray-500 rounded-lg" style={{ maxWidth: '100%' }} />
                     </div>
                     <div className="text-lg text-center md:w-1/2 md:pl-4">
                         <p>Track your expenses and budget<br/>more effectively by syncing your <br />bank account or third-party app. <br />Your data and sensitive information <br />are securley transferred via Plaid.</p>
                         <div className="flex justify-center mt-4">
-                            <button className="bg-blue-500 text-white py-2 px-4 rounded-full">Get Started</button>
+                            <Link to='/signup'>
+                                <button className="bg-blue-500 text-white py-2 px-4 rounded-full">Get Started</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
