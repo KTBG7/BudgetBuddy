@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const DashboardPage: React.FC = () => {
+    const [showDropdown, setShowDropdown] = useState(false);
+
+    const toggleDropdown = () => {
+        setShowDropdown(!showDropdown);
+    };
+
     return (
         <div className="container mx-auto mt-8">
             <h2 className="text-3xl font-bold mb-4 text-center">Dashboard</h2>
@@ -78,6 +84,43 @@ const DashboardPage: React.FC = () => {
                                     </svg>
                                     Categories
                                 </Link>
+                                {/* Learn Button */}
+                                <button className="block py-2" onClick={toggleDropdown}>
+                                    <svg
+                                        className="h-8 w-8 text-black-500 inline-block mr-2"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth="2"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                    Learn
+                                </button>
+                                {/* Dropdown */}
+                                {showDropdown && (
+                                    <div className="absolute mt-2 py-2 w-40 bg-white border rounded-lg shadow-md">
+                                        <Link to="/investment_regiment" className="block px-4 py-2 hover:bg-gray-100">
+                                            Investments & Retirement
+                                        </Link>
+                                        <Link to="/loans&mortgage" className="block px-4 py-2 hover:bg-gray-100">
+                                            Loans & Mortgages
+                                        </Link>
+                                        <Link to="/credit" className="block px-4 py-2 hover:bg-gray-100">
+                                            Building Credit
+                                        </Link>
+                                    </div>
+                                )}
+                                {/* Settings */}
+                                <Link to="/settings" className="flex items-center py-2">
+                                    <svg className="h-8 w-8 text-black-500 mr-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />  <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                    <span className="text-black"> Settings</span>
+                                </Link>
                             </li>
                         </ul>
                     </nav>
@@ -93,7 +136,7 @@ const DashboardPage: React.FC = () => {
                         <div className="flex justify-center mb-4">
                             <button
                                 className="bg-blue-500 text-white py-2 px-10 rounded-lg"
-                                style={{ fontSize: "19px" }} 
+                                style={{ fontSize: "19px" }}
                                 onClick={() => {
                                     alert("Data synced!");
                                 }}

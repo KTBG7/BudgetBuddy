@@ -5,7 +5,6 @@ const SignInPage: React.FC = () => {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-        // Directly navigate to the dashboard
         navigate('/dashboard');
     };
 
