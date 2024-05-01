@@ -14,6 +14,7 @@ const Navbar: React.FC = () => {
               className="text-black"
               size="lg"
             />
+            <span className='m1-2'> BudgetBuddy</span>
           </Link>
         </div>
         <ul className="flex space-x-4">
