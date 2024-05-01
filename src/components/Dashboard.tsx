@@ -37,6 +37,7 @@ const DashboardPage: React.FC = () => {
             {/* Dashboard side box  */}
             <div className="flex flex-col mt-8 sm:flex-row rounded-lg pl-1">
                 <div className=" mx-auto p-4 sm:ml-9 border bg-white border-white rounded-xl sm:mr-4 pl-3 h-auto">
+                    
                     {/* Search Bar */}
                     <div className="relative">
                         <input
