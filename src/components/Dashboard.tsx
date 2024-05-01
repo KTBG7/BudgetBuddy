@@ -9,10 +9,27 @@ const DashboardPage: React.FC = () => {
     };
 
     return (
-        <div className="container mx-auto mt-8">
-            <h2 className="text-3xl font-bold mb-4 text-center">Dashboard</h2>
-            <div className="flex">
-                <div className="w-1/4 pr-4">
+        <>
+            <h2 className="text-3xl font-bold mb-8 text-center">Welcome, Jon Doe!</h2>
+            <div className="flex mt-8">
+                <div className=" mx-auto p-4 ml-8 border border-gray-300 rounded-lg pl-10">
+                    {/* Home Button */}
+                    <Link to="/" className="block mb-4">
+                        <svg
+                            className="h-8 w-8 text-gray-400 mr-2"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        >
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 8 8 12 12 16" />
+                            <line x1="16" y1="12" x2="8" y2="12" />
+                        </svg>
+                        <span className="text-gray-400">Home</span>
+                    </Link>
                     {/* Search Bar */}
                     <input
                         type="text"
@@ -23,7 +40,7 @@ const DashboardPage: React.FC = () => {
                     <nav className="bg-white-200 rounded-lg px-4 py-2">
                         <ul>
                             <li>
-                                <Link to="/dashboard" className="block py-2">
+                                <Link to="/dashboard" className="block py-2 flex items-center">
                                     <svg
                                         className="h-8 w-8 text-black-500 inline-block mr-2"
                                         width="24"
@@ -44,7 +61,7 @@ const DashboardPage: React.FC = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/accounts" className="block py-2">
+                                <Link to="/accounts" className="block py-2 flex items-center">
                                     <svg
                                         className="h-8 w-8 text-black-500 inline-block mr-2"
                                         width="24"
@@ -66,7 +83,7 @@ const DashboardPage: React.FC = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/categories" className="block py-2">
+                                <Link to="/categories" className="block py-2 flex items-center">
                                     <svg
                                         className="h-8 w-8 text-black-500 inline-block mr-2"
                                         width="24"
@@ -84,8 +101,10 @@ const DashboardPage: React.FC = () => {
                                     </svg>
                                     Categories
                                 </Link>
-                                {/* Learn Button */}
-                                <button className="block py-2" onClick={toggleDropdown}>
+                            </li>
+                            {/* Learn Button */}
+                            <li>
+                                <button className="block py-2 flex items-center" onClick={toggleDropdown}>
                                     <svg
                                         className="h-8 w-8 text-black-500 inline-block mr-2"
                                         width="24"
@@ -115,11 +134,33 @@ const DashboardPage: React.FC = () => {
                                         </Link>
                                     </div>
                                 )}
-                                {/* Settings */}
-                                <Link to="/settings" className="flex items-center py-2">
-                                    <svg className="h-8 w-8 text-black-500 mr-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />  <circle cx="12" cy="12" r="3" />
+                            </li>
+                            {/* Settings */}
+                            <li>
+                                <Link to="/settings" className="block py-2 flex items-center">
+                                    <svg
+                                        className="h-8 w-8 text-black-500 inline-block mr-2"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth="2"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    >
+                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                        <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                        <circle cx="12" cy="12" r="3" />
                                     </svg>
-                                    <span className="text-black"> Settings</span>
+                                    Settings
+                                </Link>
+                            </li>
+                            {/* Sign In */}
+                            <li>
+                                <Link to="/signin" className="block py-2 flex items-center">
+                                    <svg className="h-8 w-8 text-black-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />  <path d="M7 12h14l-3 -3m0 6l3 -3" /></svg>
+                                    Log Out
                                 </Link>
                             </li>
                         </ul>
@@ -147,7 +188,7 @@ const DashboardPage: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
