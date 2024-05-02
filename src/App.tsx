@@ -8,6 +8,7 @@ import DashboardPage from './components/Dashboard';
 import InvestmentsRetirementPage from './components/InvestmentsRetirementPage';
 import LoansandMortgagespage from './components/LoansandMortgagespage';
 import BuildingCreditpage from './components/BuildingCreditpage';
+import SyncAccountPage from './components/SyncAccountPage'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/investment_regiment" element={<InvestmentsRetirementPage />} />
           <Route path="/loans&mortgage" element={<LoansandMortgagespage />} />
           <Route path="/credit" element={<BuildingCreditpage/>} />
+          <Route path="/sync" element={<SyncAccountPage/>} />
         </Routes>
       </Router>
     </div>
