@@ -63,7 +63,6 @@ const DashboardPage: React.FC = () => {
                         <h1 className="text-gray-400 text-sm">MAIN MENU</h1>
                         {/* Navigation Links */}
                         <nav className="bg-white-200 rounded-lg px-4 py-2">
-
                             <Link to="/dashboard" className="block-link py-2 flex items-center">
                                 <svg
                                     className="h-8 w-8 text-black-500 inline-block mr-2"
