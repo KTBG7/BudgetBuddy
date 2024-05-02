@@ -7,7 +7,7 @@ import Third from '../assets/Third.png'
 const SyncAccountPage = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log('Syncing account');
+        console.log('sync');
     };
 
 
@@ -31,10 +31,10 @@ const SyncAccountPage = () => {
                                 <line x1="16" y1="12" x2="8" y2="12" />
                             </svg>
                             <span className="text-gray-400 text-2xl">Dashboard</span>
-                            <h2 className="text-4xl font-bold mb-6 ml-auto mr-auto mt-5 text-center" style={{ maxWidth: "max-content" }}>
-                                Sync an Account
-                            </h2>
                         </Link>
+                        <h2 className="text-4xl font-bold mb-6 mx-auto mt-5 text-center" style={{ maxWidth: "max-content" }}>
+                            Sync an Account
+                        </h2>
                         <p className='text-gray-400 text-center ml-5'>BudgetBuddy takes your inforamtion seriously. All Finacial data is securely encrypted and <br /> transmitted via <em>Plaid</em>. Sensitive information, such as bank credentials, will be kept safe.</p>
                         {/* First Image Box */}
                         <div className="flex justify-center my-6">
