@@ -51,24 +51,18 @@ const SyncAccountPage = () => {
                                 <h3 className="text-lg font-semibold mt-4 ">Existing Bank Account</h3>
                                 <img src={Exisiting} alt="Existing Logo" width={300} height={100} />
                                 <p className="text-gray-500 mt-2">Link an existing checking or savings account <br /> with your bank to better budget and track your <br />expenses.</p>
-                                <button
-                                    type="submit"
-                                    className="bg-blue-500 text-white py-2 px-8 rounded-full mt-7 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                                >
+                                <Link to="/bank-sync" className="bg-blue-500 text-white py-2 px-8 rounded-full mt-8 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
                                     Sync
-                                </button>
+                                </Link>
                             </div>
                             {/* Third Image Box */}
                             <div className="flex flex-col items-center">
                                 <h3 className="text-lg font-semibold mt-4 mr-16">Third-Party App</h3>
                                 <img src={Third} alt="Existing Logo" width={300} height={100} />
                                 <p className="text-gray-500 mt-2">Link an existing third-party spending account <br />(Ex: Venmo, Cashsapp,  etc.)</p>
-                                <button
-                                    type="submit"
-                                    className="bg-blue-500 text-white py-2 px-8 rounded-full mt-14 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                                >
+                                <Link to="/bank-sync" className="bg-blue-500 text-white py-2 px-8 rounded-full mt-14 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
                                     Sync
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PastedGraphic from '../assets/PastedGraphic.png'
+import peace from '../assets/peace.png'
 import Fidelity from '../assets/Fidelity.png'
 import Vanguard from '../assets/Vanguard.png'
 import charles from '../assets/charles.png'
@@ -34,7 +34,7 @@ const InvestmentsRetirementPage: React.FC = () => {
                 {/* Left Side with padding */}
                 <div className="bg-white-200 rounded-lg mb-4 ml-4 mt-4" style={{ width: '600px', height: '400px' }}>
                     {/* Replace this div with the img element */}
-                    <img src={PastedGraphic} alt="Investments and Retirement" className="w-full h-full object-cover rounded-lg" />
+                    <img src={peace} alt="Investments and Retirement" className="w-full h-full object-cover rounded-lg" />
                 </div>
                 {/* Right Side */}
                 <div className="w-1/2 flex flex-col justify-center items-center">
