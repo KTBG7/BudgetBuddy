@@ -10,6 +10,7 @@ import LoansandMortgagespage from './components/LoansandMortgagespage';
 import BuildingCreditpage from './components/BuildingCreditpage';
 import SyncAccountPage from './components/SyncAccountPage';
 import BankSync from './components/BankSync'
+import Quiz from './components/InvestQuizPage';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/credit" element={<BuildingCreditpage/>} />
           <Route path="/sync" element={<SyncAccountPage/>} />
           <Route path='/bank-sync' element={<BankSync/>} />
+          <Route path='/quiz' element={<Quiz/>} />
         </Routes>
       </Router>
     </div>
