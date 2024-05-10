@@ -9,7 +9,8 @@ import InvestmentsRetirementPage from './components/InvestmentsRetirementPage';
 import LoansandMortgagespage from './components/LoansandMortgagespage';
 import BuildingCreditpage from './components/BuildingCreditpage';
 import SyncAccountPage from './components/SyncAccountPage';
-import BankSync from './components/BankSync';
+import BankSync from './components/BankSync'
+import Quiz from './components/InvestQuizPage';
 import SyncedDashboard from './components/SyncedDashboard';
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
             element={<InvestmentsRetirementPage />}
           />
           <Route path="/loans&mortgage" element={<LoansandMortgagespage />} />
+          <Route path="/credit" element={<BuildingCreditpage/>} />
+          <Route path="/sync" element={<SyncAccountPage/>} />
+          <Route path='/bank-sync' element={<BankSync/>} />
+          <Route path='/quiz' element={<Quiz/>} />
           <Route path="/credit" element={<BuildingCreditpage />} />
           <Route path="/sync" element={<SyncAccountPage />} />
           <Route path="/bank-sync" element={<BankSync />} />

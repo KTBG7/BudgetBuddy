@@ -42,7 +42,7 @@ const HomePage: React.FC = () => {
                         </div>
                         <p className='text-center mt-4 text-gray-500'>Investing 101. Learn about common terms used, <br />investing retirement, and how to get started.</p>
                         <div className="mt-3 flex justify-center space-x-4">
-                            <a href="#" className="text-black py-2 spacce-x-4">Quiz Me</a>
+                            <Link to="/quiz" className="text-black py-2 space-x-4">Quiz Me</Link>
                             <a href="#" className="underline text-black py-2 px-4">Learn More</a>
                         </div>
                     </div>
