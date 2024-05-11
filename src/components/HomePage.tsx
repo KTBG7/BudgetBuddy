@@ -43,7 +43,7 @@ const HomePage: React.FC = () => {
                         <p className='text-center mt-4 text-gray-500'>Investing 101. Learn about common terms used, <br />investing retirement, and how to get started.</p>
                         <div className="mt-3 flex justify-center space-x-4">
                             <Link to="/quiz" className="text-black py-2 space-x-4">Quiz Me</Link>
-                            <a href="#" className="underline text-black py-2 px-4">Learn More</a>
+                            <Link to="/investment_regiment" className="underline text-black py-2 px-4">Learn More</Link>
                         </div>
                     </div>
                     {/* Loans & Mortgages */}
@@ -54,8 +54,8 @@ const HomePage: React.FC = () => {
                         </div>
                         <p className='text-center mt-4 text-gray-500'>Loans and mortgages are confusing, but they <br />dont need to be. Get started and learn more.</p>
                         <div className="mt-3 flex justify-center space-x-4">
-                            <a href="#" className="text-black py-2 spacce-x-4">Quiz Me</a>
-                            <a href="#" className="underline text-black py-2 px-4">Learn More</a>
+                            <Link to="/mortquiz" className="text-black py-2 space-x-4">Quiz Me</Link>
+                            <Link to='/loans&mortgage' className="underline text-black py-2 px-4">Learn More</Link>
                         </div>
                     </div>
                     {/* Building Credit */}
@@ -66,8 +66,8 @@ const HomePage: React.FC = () => {
                         </div>
                         <p className='text-center mt-4 text-gray-500'>Building credit is the foundation to becoming <br />finacially sound, and anyone can get started!</p>
                         <div className="mt-3 flex justify-center space-x-4">
-                            <a href="#" className="text-black py-2 spacce-x-4">Quiz Me</a>
-                            <a href="#" className="underline text-black py-2 px-4">Learn More</a>
+                            <Link to="/creditquiz" className="text-black py-2 space-x-4">Quiz Me</Link>
+                            <Link to='credit' className="underline text-black py-2 px-4">Learn More</Link>
                         </div>
                     </div>
                 </div>
