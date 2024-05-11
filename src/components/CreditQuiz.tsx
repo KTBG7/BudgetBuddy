@@ -9,19 +9,19 @@ interface Question {
     hint: string;
 }
 
-const QuizPage = () => {
+const CreditQuiz = () => {
     const questions: Question[] = [
         {
-            question: '1. What does the acronym "IRA" stand for in the context of retirement savings?',
-            options: ['IRA stands for Individual Retirement Account', 'IRA stands for Individual Relaxation Avenue', 'IRA stands for Individual Revenue Accountant', 'Stuck?: Use a hint.'],
-            correctAnswer: 'IRA stands for Individual Retirement Account',
-            hint: '💡 Think about the purpose of retirement accounts.',
+            question: '1. What does the term "credit utilization ratio" refer to in the context of credit scores?',
+            options: ['The total amount of credit available to a person', 'The percentage of available credit that a person is using', 'The time duration for which a credit account has been open', 'Stuck?: Use a hint.'],
+            correctAnswer: 'The percentage of available credit that a person is using',
+            hint: '💡 This ratio plays a significant role in determining creditworthiness',
         },
         {
-            question: '2. What is the general recommendation for how much of your income should be saved for retirement each year?',
-            options: ['The general recommendation is to save at least 25K of your annual income for retirement.', 'The general recommendation is to save as much as you would like to.', 'The general recommendation is to save at least 10-15% of your annual income for retirement.', 'Stuck?: Use a hint.'],
-            correctAnswer: 'The general recommendation is to save at least 10-15% of your annual income for retirement.',
-            hint: '💡 It\'s a percentage range commonly suggested by financial advisors.',
+            question: '2. How can late payments affect your credit score?',
+            options: ['They have no impact on credit scores', 'They can increase your credit score', 'They can lower your credit score', 'Stuck?: Use a hint.'],
+            correctAnswer: 'They can lower your credit score',
+            hint: '💡 Timely payments are crucial for maintaining a good credit history. ',
         },
     ];
 
@@ -147,7 +147,7 @@ const QuizPage = () => {
                         </Link>
                         {/* Conditional rendering of title */}
                         {!quizSubmitted && (
-                            <h2 className="text-3xl font-bold mb-10">Investments and Retirement</h2>
+                            <h2 className="text-3xl font-bold mb-10">Loans and Mortgages</h2>
                         )}
                     </div>
                     {!quizSubmitted && (
@@ -249,10 +249,10 @@ const QuizPage = () => {
                                         <div>
                                             {questionIndex === 0 ? (
                                                 // Custom feedback for the first question
-                                                "That’s Correct! “IRA” is a commonly used acronym for Individual Retirement Account."
+                                                "That’s Correct! “The percentage of available credit that a person is using"
                                             ) : (
                                                 // Custom feedback for the second question
-                                                "That’s Correct! It’s recommended to save a minimum of 10-15% of your annual income."
+                                                "That’s Correct! They can lower your credit score"
                                             )}
                                         </div>
                                         <button onClick={() => setSuccessAlert(false)} className="text-white hover:text-gray-300 focus:outline-none" title="Close">
@@ -267,10 +267,10 @@ const QuizPage = () => {
                                         <div>
                                             {questionIndex === 0 ? (
                                                 // Custom feedback for the first question
-                                                "Not exactly, “IRA” is a commonly used acronym for Individual Retirement Account."
+                                                "Not exactly, the percentage of available credit that a person is using, is the correct answer."
                                             ) : (
                                                 // Custom feedback for the second question
-                                                "Not quite, it’s recommended to save a minimum of 10-15% of your annual income for retirement."
+                                                "Not quite, they can lower your credit score, is the correct answer."
                                             )}
                                         </div>
                                         <button onClick={() => setIncorrectAlert(false)} className="text-white hover:text-gray-300 focus:outline-none" title="Dismiss Incorrect Alert">
@@ -298,4 +298,4 @@ const QuizPage = () => {
     );
 };
 
-export default QuizPage;
+export default CreditQuiz;

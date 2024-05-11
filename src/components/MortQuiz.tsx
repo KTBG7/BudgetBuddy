@@ -9,19 +9,19 @@ interface Question {
     hint: string;
 }
 
-const QuizPage = () => {
+const MortQuiz = () => {
     const questions: Question[] = [
         {
-            question: '1. What does the acronym "IRA" stand for in the context of retirement savings?',
-            options: ['IRA stands for Individual Retirement Account', 'IRA stands for Individual Relaxation Avenue', 'IRA stands for Individual Revenue Accountant', 'Stuck?: Use a hint.'],
-            correctAnswer: 'IRA stands for Individual Retirement Account',
-            hint: '💡 Think about the purpose of retirement accounts.',
+            question: '1. What is the purpose of a down payment on a house?',
+            options: ['To cover the entire cost of the home upfront', 'To reduce the amount borowed and secure the loan', 'To reduce the cost of property tax in the future', 'Stuck?: Use a hint.'],
+            correctAnswer: 'To reduce the amount borowed and secure the loan',
+            hint: '💡 A down payment is made to lessen the amount of this type of financial agreement',
         },
         {
-            question: '2. What is the general recommendation for how much of your income should be saved for retirement each year?',
-            options: ['The general recommendation is to save at least 25K of your annual income for retirement.', 'The general recommendation is to save as much as you would like to.', 'The general recommendation is to save at least 10-15% of your annual income for retirement.', 'Stuck?: Use a hint.'],
-            correctAnswer: 'The general recommendation is to save at least 10-15% of your annual income for retirement.',
-            hint: '💡 It\'s a percentage range commonly suggested by financial advisors.',
+            question: '2. What is a credit score used for in loan applications?',
+            options: ['To determine the amount of interest the bank will earn', 'To better understand the applicant\'s purchase history', 'To assess the borrower\'s credit worthiness', 'Stuck?: Use a hint.'],
+            correctAnswer: 'To assess the borrower\'s credit worthiness',
+            hint: '💡 How would a loaner know that they could trust you to pay them back?',
         },
     ];
 
@@ -69,7 +69,7 @@ const QuizPage = () => {
         setShowFeedback(true);
 
         // Show feedback based on answer
-        if (answers[questionIndex] === questions[questionIndex].correctAnswer) {
+        if (selectedOption === questions[questionIndex].correctAnswer) {
             setSuccessAlert(true);
         } else {
             setIncorrectAlert(true);
@@ -147,7 +147,7 @@ const QuizPage = () => {
                         </Link>
                         {/* Conditional rendering of title */}
                         {!quizSubmitted && (
-                            <h2 className="text-3xl font-bold mb-10">Investments and Retirement</h2>
+                            <h2 className="text-3xl font-bold mb-10">Loans and Mortgages</h2>
                         )}
                     </div>
                     {!quizSubmitted && (
@@ -249,10 +249,10 @@ const QuizPage = () => {
                                         <div>
                                             {questionIndex === 0 ? (
                                                 // Custom feedback for the first question
-                                                "That’s Correct! “IRA” is a commonly used acronym for Individual Retirement Account."
+                                                "That’s Correct! “To reduce the amount borrowed and secure the loan."
                                             ) : (
                                                 // Custom feedback for the second question
-                                                "That’s Correct! It’s recommended to save a minimum of 10-15% of your annual income."
+                                                "That’s Correct! To assess the borrower's credit worthiness."
                                             )}
                                         </div>
                                         <button onClick={() => setSuccessAlert(false)} className="text-white hover:text-gray-300 focus:outline-none" title="Close">
@@ -267,10 +267,10 @@ const QuizPage = () => {
                                         <div>
                                             {questionIndex === 0 ? (
                                                 // Custom feedback for the first question
-                                                "Not exactly, “IRA” is a commonly used acronym for Individual Retirement Account."
+                                                "Not exactly, to reduce the amount borrowed and secure the loan, is the correct answer."
                                             ) : (
                                                 // Custom feedback for the second question
-                                                "Not quite, it’s recommended to save a minimum of 10-15% of your annual income for retirement."
+                                                "Not quite, to assess the borrower's credit worthiness, is the correct answer."
                                             )}
                                         </div>
                                         <button onClick={() => setIncorrectAlert(false)} className="text-white hover:text-gray-300 focus:outline-none" title="Dismiss Incorrect Alert">
@@ -298,4 +298,4 @@ const QuizPage = () => {
     );
 };
 
-export default QuizPage;
+export default MortQuiz;

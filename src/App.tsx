@@ -11,7 +11,10 @@ import BuildingCreditpage from './components/BuildingCreditpage';
 import SyncAccountPage from './components/SyncAccountPage';
 import BankSync from './components/BankSync'
 import Quiz from './components/InvestQuizPage';
+import MortQuiz from './components/MortQuiz';
+import CreditQuiz from './components/CreditQuiz';
 import SyncedDashboard from './components/SyncedDashboard';
+  
 
 function App() {
   return (
@@ -32,10 +35,14 @@ function App() {
           <Route path="/sync" element={<SyncAccountPage/>} />
           <Route path='/bank-sync' element={<BankSync/>} />
           <Route path='/quiz' element={<Quiz/>} />
+          <Route path='/mortquiz' element={<MortQuiz/>} />
+          <Route path='/creditquiz' element={<CreditQuiz/>} />
+
           <Route path="/credit" element={<BuildingCreditpage />} />
           <Route path="/sync" element={<SyncAccountPage />} />
           <Route path="/bank-sync" element={<BankSync />} />
           <Route path="/synced-dashboard" element={<SyncedDashboard />} />
+          f0c807181d1a7d34b82bc7ec3dea39e85694725f
         </Routes>
       </Router>
     </div>
