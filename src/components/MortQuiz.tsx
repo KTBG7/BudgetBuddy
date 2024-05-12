@@ -129,7 +129,7 @@ const MortQuiz = () => {
             <div className="flex justify-center">
                 <div className="w-full md:w-1/2 pr-4">
                     <div className="flex items-left mb-4">
-                        <Link to="/" className="absolute top-16 left-4 mt-4 ml-4 text-blue-500 flex items-center">
+                        <Link to="/dashboard" className="absolute top-16 left-4 mt-4 ml-4 text-blue-500 flex items-center">
                             <svg
                                 className="h-8 w-8 text-gray-400 background mr-2"
                                 viewBox="0 0 22 24"

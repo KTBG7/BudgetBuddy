@@ -143,11 +143,20 @@ const DashboardPage: React.FC = () => {
                                     <Link to="/investment_regiment" className="block px-4 py-2 hover:bg-gray-100">
                                         Investments & Retirement
                                     </Link>
+                                    <Link to="/quiz" className="block px-4 py-2 hover:bg-gray-100">
+                                        -----Quiz
+                                    </Link>
                                     <Link to="/loans&mortgage" className="block px-4 py-2 hover:bg-gray-100">
                                         Loans & Mortgages
                                     </Link>
+                                    <Link to="/mortquiz" className="block px-4 py-2 hover:bg-gray-100">
+                                        -----Quiz  
+                                    </Link>
                                     <Link to="/credit" className="block px-4 py-2 hover:bg-gray-100">
                                         Building Credit
+                                    </Link>
+                                    <Link to="/creditquiz" className="block px-4 py-2 hover:bg-gray-100">
+                                        ----Quiz
                                     </Link>
                                 </div>
                             )}
